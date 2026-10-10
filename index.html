@@ -1,3 +1,4 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>임나경 Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +33,7 @@ a:hover{text-decoration:underline}
 .badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-mono);font-size:12.5px;color:var(--ok);background:var(--ok-soft);padding:6px 12px;border-radius:999px}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 var(--ok);animation:pulse 2.2s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--ok) 55%,transparent)}70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.brand{font-weight:700;font-size:15px;letter-spacing:-.01em;color:var(--ink)}
 .toggle{font-family:var(--f-mono);font-size:12.5px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer}
 
 /* hero */
@@ -52,6 +54,8 @@ a:hover{text-decoration:underline}
 .tag{font-family:var(--f-mono);font-size:12.5px;padding:4px 10px;border-radius:8px;background:var(--accent-soft);color:var(--accent)}
 .tag.plain{background:transparent;border:1px solid var(--line);color:var(--muted)}
 
+.panel.now{margin-top:32px;display:flex;flex-wrap:wrap;gap:20px 48px;align-items:flex-start}
+.now-col{min-width:0}
 /* trace (signature) */
 .trace{margin-top:14px;display:grid;gap:8px;font-family:var(--f-mono);font-size:12.5px}
 .stage{display:grid;grid-template-columns:54px 1fr auto;gap:10px;align-items:center}
@@ -93,6 +97,8 @@ section{padding-block:56px;border-top:1px solid var(--line)}
 .step h4{margin:0 0 4px;font-size:16.5px}
 .step p{margin:0;color:var(--muted);font-size:15px;max-width:68ch}
 .flow{font-family:var(--f-mono);font-size:12.5px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-top:8px;overflow-x:auto;white-space:nowrap}
+.learned{margin-top:10px!important;padding:12px 14px;border-radius:10px;background:var(--warn-soft);color:var(--ink)!important;font-size:14.5px}
+.learned b{color:var(--warn);margin-right:8px}
 .flow .arr{color:var(--muted);padding-inline:6px}
 
 /* projects */
@@ -123,16 +129,17 @@ table.sum{width:100%;border-collapse:collapse;font-size:14.5px;min-width:720px}
 .sum th{text-align:left;font-family:var(--f-mono);font-size:12px;font-weight:500;letter-spacing:.06em;color:var(--muted);padding:12px 16px;border-bottom:1px solid var(--line)}
 .sum td{padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}
 .sum tr:last-child td{border-bottom:0}
-.sum td:last-child{color:var(--warn);font-weight:600;white-space:nowrap}
+.sum td:last-child{color:var(--warn);font-weight:600}
 .sum .sub{display:block;font-size:12.5px;color:var(--muted);font-weight:400}
 .sum .num{font-family:var(--f-mono);font-size:13px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.subhead{font-family:var(--f-display);font-size:20px;font-weight:700;letter-spacing:-.01em;margin:48px 0 16px}
 .cases{display:grid;gap:22px}
 .case{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px 26px 22px;min-width:0}
 @media (max-width:520px){.case{padding:20px 18px}}
-.case-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.case-head{margin-bottom:18px}
 .case-head .ctx{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
 .case-head h3{font-family:var(--f-display);font-size:22px;letter-spacing:-.015em;margin:6px 0 0;line-height:1.35}
-.case-head .tags{margin:0}
+.case-head .tags{margin:12px 0 0}
 .case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
 @media (max-width:720px){.case-grid{grid-template-columns:1fr}}
 .cell{background:var(--surface);padding:16px 18px;min-width:0}
@@ -140,6 +147,10 @@ table.sum{width:100%;border-collapse:collapse;font-size:14.5px;min-width:720px}
 .cell p{margin:6px 0 0;font-size:15px;color:var(--ink)}
 .code-note{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;min-width:0}
 .code-note code{font-family:var(--f-mono);font-size:12.5px;background:var(--accent-soft);color:var(--ink);padding:6px 10px;border-radius:8px;overflow-x:auto;max-width:100%;white-space:nowrap}
+.takeaway{margin:8px 0 0;font-size:15.5px;font-weight:600;color:var(--accent);line-height:1.5;max-width:60ch}
+.job{margin:14px 0 0;font-size:14.5px;color:var(--muted)}
+.job b{color:var(--accent);margin-right:8px}
+.job+.redo{margin-top:6px}
 .redo{margin:14px 0 0;font-size:14.5px;color:var(--muted)}
 .redo b{color:var(--ink);margin-right:8px}
 
@@ -171,35 +182,26 @@ footer{padding-block:40px 60px;color:var(--muted);font-size:13.5px;border-top:1p
 
 <div class="wrap">
   <div class="top">
-    <span class="badge"><span class="dot"></span>Open to work · 2027 신입</span>
-    <button class="toggle" id="themeToggle" type="button">테마 전환</button>
+    <span class="badge"><span class="dot"></span>Available for work</span>
   </div>
 
   <header class="hero">
     <div class="eyebrow">Portfolio / 2026 · Automotive Embedded SW</div>
     <h1>정상 흐름 너머,<br><em>예외까지</em> 구현합니다.</h1>
-    <div class="name">임나경 <span>· 차량 SW 개발자</span></div>
+    <div class="name">임나경 <span>· 임베디드 SW 개발자</span></div>
     <p class="lead">QNX 기반 차량 업데이트 SW를 실무에서 분석하고, 로그로 원인을 코드까지 추적하며, 기존 코드에 없던 예외 처리를 더해 리뷰를 통과시켰습니다.</p>
 
-    <div class="hero-grid">
-      <div class="panel">
+    <div class="panel now">
+      <div class="now-col">
         <div class="eyebrow">Currently</div>
         <div class="now-role">베이리스 OTA개발팀 · 연구원(인턴)</div>
         <div class="now-meta">2026.05 – 현재</div>
-        <div class="eyebrow" style="margin-top:18px">Focus</div>
+      </div>
+      <div class="now-col">
+        <div class="eyebrow">Focus</div>
         <div class="tags">
           <span class="tag">C++</span><span class="tag">QNX</span><span class="tag">Linux</span><span class="tag">CAN</span><span class="tag">CAPL</span><span class="tag plain">Git</span><span class="tag plain">Jira</span>
         </div>
-      </div>
-      <div class="panel" aria-label="OTA 업데이트 단계 예시">
-        <div class="eyebrow">OTA update · 성공 흐름과 실패 분기</div>
-        <div class="trace">
-          <div class="stage"><span class="t">STEP 1</span><span class="bar"><i style="--w:100%;--d:0s"></i></span><span class="s">조건 확인 OK</span></div>
-          <div class="stage"><span class="t">STEP 2</span><span class="bar"><i style="--w:100%;--d:.25s"></i></span><span class="s">다운로드 OK</span></div>
-          <div class="stage"><span class="t">STEP 3</span><span class="bar"><i style="--w:100%;--d:.5s"></i></span><span class="s">설치 OK</span></div>
-          <div class="stage fail"><span class="t">STEP 4</span><span class="bar"><i style="--w:62%;--d:.75s"></i></span><span class="s">저장 실패 → 롤백</span></div>
-        </div>
-        <p class="trace-note">정상 흐름만 동작하는 코드는 완성된 기능이 아닙니다. 저는 4단계의 실패까지 설계하고 확인합니다.</p>
       </div>
     </div>
   </header>
@@ -215,7 +217,7 @@ footer{padding-block:40px 60px;color:var(--muted);font-size:13.5px;border-top:1p
       <article class="strength">
         <div class="k">TRACE</div>
         <h3>로그로 원인을 코드까지 추적</h3>
-        <p>매일 정상 로그를 수집해 익히고, 실패 로그와 비교한 차이 지점을 로그 출력 코드 위치까지 매칭해 원인을 좁혔습니다.</p>
+        <p>매일 정상 로그를 수집해 Excel로 단계별로 정리하고, 실패 로그와 비교한 차이 지점을 로그 출력 코드 위치까지 매칭해 원인을 좁혔습니다.</p>
       </article>
       <article class="strength">
         <div class="k">ROBUSTNESS</div>
@@ -243,20 +245,22 @@ footer{padding-block:40px 60px;color:var(--muted);font-size:13.5px;border-top:1p
         <div class="steps">
           <div class="step">
             <h4>코드 분석 · 다이어그램으로 구조화</h4>
-            <p>QNX 환경에서 차량 업데이트 SW를 빌드하고, 시퀀스·클래스 다이어그램으로 흐름을 정리했습니다. GDBus 프로세스 간 통신, 스레드, 파일 입출력은 C++ 예제로 직접 구현해 익혔고, 업데이트 단계별로 봐야 할 클래스를 빠르게 찾게 되었습니다.</p>
+            <p>QNX 환경에서 차량 업데이트 SW를 빌드하고, PlantUML 시퀀스·클래스 다이어그램을 성공 흐름부터 단계별 실패까지 점점 깊게 그리며 분석했습니다. 그 결과 업데이트 단계마다 봐야 할 클래스를 빠르게 찾게 되었고, 코드에 쓰인 GDBus·스레드·파일 입출력은 C++ 예제로 직접 구현하며 익혔습니다.</p>
           </div>
           <div class="step">
             <h4>로그 분석 · 원인을 코드 단위로</h4>
-            <p>Jira로 공유된 실패 이슈를 정상 로그와 비교해 원인을 찾고, 수정된 패키지는 반복 테스트와 의도적인 오류 발생으로 롤백까지 확인했습니다.</p>
-            <div class="flow">정상 로그 수집<span class="arr">→</span>실패 로그 비교<span class="arr">→</span>차이 지점<span class="arr">→</span>출력 코드 위치<span class="arr">→</span>원인·수정<span class="arr">→</span>반복·롤백 테스트</div>
+            <p>매일 정상 로그를 분석하고, Jira로 공유된 실패 이슈의 로그를 다운로드 받아 정상 로그와 비교해 원인을 찾고, 수정된 패키지는 반복 테스트와 의도적인 오류 발생으로 롤백까지 확인했습니다.</p>
+            <div class="flow">정상 로그 정리<span class="arr">→</span>실패 로그 비교<span class="arr">→</span>출력 코드 매칭<span class="arr">→</span>원인 파악<span class="arr">→</span>반복·롤백 테스트</div>
           </div>
           <div class="step">
             <h4>코드 강건화 · 예외 처리 추가</h4>
-            <p>write 이후 스트림 상태를 확인해 저장 실패 시 다음 단계로 넘어가지 않도록 했고, 공유 자원은 atomic과 mutex로 보호해 경쟁 상태를 막았습니다.</p>
+            <p>파일 처리는 open, write, flush, close 단계마다 스트림 상태를 확인해 저장 실패 시 다음 단계로 넘어가지 않도록 했고, 공유 자원은 atomic과 mutex로 보호해 경쟁 상태를 막았습니다. 이 코드는 리뷰를 통과해 반영되었습니다.</p>
+            <div class="flow">open → is_open()<span class="arr">·</span>write → fail()/bad()<span class="arr">·</span>flush → 상태 확인<span class="arr">·</span>close → fail()</div>
+            <p class="learned"><b>리뷰에서 배운 점</b> flush는 데이터를 OS 버퍼까지만 넘기므로, 전원 차단에도 기록을 보장하려면 POSIX 수준의 open·write·fsync·close가 필요합니다. 업데이트처럼 저장 신뢰성이 중요한 지점은 이 방식으로 보강해야 한다는 것을 배웠습니다.</p>
           </div>
           <div class="step">
             <h4>검증 · 패키징 개선</h4>
-            <p>매일 새 업데이트 패키지를 테스트해 팝업 미표시, 진행률 정지, 완료 팝업 누락을 찾아 공유했고, Shell Script 패키징의 하드코딩된 판매 지역·차종 목록을 동적으로 관리하도록 바꿨습니다.</p>
+            <p>매일 새 업데이트 패키지를 테스트해 팝업 미표시, 재부팅 후 부팅 실패, 완료 팝업 누락을 찾아 공유했고, Shell Script 패키징의 하드코딩된 향지·차종 목록을 동적으로 관리하도록 바꿨습니다.</p>
           </div>
         </div>
       </div>
@@ -270,8 +274,8 @@ footer{padding-block:40px 60px;color:var(--muted);font-size:13.5px;border-top:1p
       <table class="sum">
         <thead><tr><th>프로젝트</th><th>기간</th><th>본인 담당</th><th>환경</th><th>결과</th></tr></thead>
         <tbody>
-          <tr><td><b>Jira Board</b><span class="sub">인턴 사내 프로젝트</span></td><td class="num">2026.06 –</td><td>개인 개발 · 팀 배포</td><td>Jira REST API, 사내 AI</td><td>반나절 → 10분</td></tr>
-          <tr><td><b>OTA 차량 기능 업데이트</b><span class="sub">현대모비스 부트캠프 PBL · 5인</span></td><td class="num">2026.02 – 03</td><td>입력 ECU 4종, 스마트 라이트 제어, 통합 테스트</td><td>CANoe, CAPL, CAN</td><td>통합 테스트 10건</td></tr>
+          <tr><td><b>Jira Board</b><span class="sub">인턴 사내 프로젝트</span></td><td class="num">2026.06 –</td><td>개인 개발 · 팀 배포</td><td>Jira, 사내 AI</td><td>팀 배포, Jira 이슈 수정 반나절 → 10분</td></tr>
+          <tr><td><b>OTA 차량 기능 업데이트</b><span class="sub">현대모비스 부트캠프 PBL · 5인</span></td><td class="num">2026.02 – 03</td><td>입력 ECU 4종, 스마트 라이트 제어, 통합 테스트</td><td>CANoe, CAPL, CAN</td><td>업데이트·롤백 시나리오 검증 완료</td></tr>
           <tr><td><b>슬로몬</b><span class="sub">캡스톤 · 4인 · 팀장</span></td><td class="num">2024.09 – 12</td><td>임베디드 파트 단독 (센서·OBD·판단 알고리즘)</td><td>Raspberry Pi, Python, OBD-II</td><td>학회 동상</td></tr>
           <tr><td><b>모밋 mo.meet</b><span class="sub">캡스톤 · 4인 · 팀장</span></td><td class="num">2025.02 – 06</td><td>AI 회의록 서버, 투표·정산 API</td><td>FastAPI, Whisper, pyannote</td><td>학회 은상</td></tr>
           <tr><td><b>달리자전거</b><span class="sub">창의프로젝트 · 4인 · 팀장</span></td><td class="num">2024.04 – 06</td><td>지도·위치 데이터, 위험 요소 제보</td><td>Kotlin, Naver Map API</td><td>장려상 · 학회 동상</td></tr>
@@ -279,53 +283,55 @@ footer{padding-block:40px 60px;color:var(--muted);font-size:13.5px;border-top:1p
       </table>
     </div>
 
-    <div class="eyebrow" style="margin:44px 0 16px">대표 프로젝트 상세 · 문제 → 제약 → 선택 → 결과</div>
+    <h3 class="subhead">대표 프로젝트</h3>
     <div class="cases">
 
       <article class="case">
         <div class="case-head">
           <div><div class="ctx">캡스톤디자인 · 2024.09 – 12 · 4인 중 임베디드 단독 담당</div>
-          <h3>슬로몬 · OBD-II·페달 센서 기반 급발진 감지</h3></div>
-          <div class="tags"><span class="tag">Raspberry Pi</span><span class="tag">Python</span><span class="tag">OBD-II</span><span class="tag plain">OpenCV</span><span class="tag plain">Bluetooth</span></div>
+          <h3>슬로몬 · OBD-II·페달 센서 기반 급발진 감지</h3>
+          <p class="takeaway">센서와 차량 데이터를 SW 판단으로 잇는 임베디드 기본기,<br>안전과 직결된 판단을 보수적으로 설계하는 관점</p>
+          <div class="tags"><span class="tag">Raspberry Pi</span><span class="tag">Python</span><span class="tag">OBD-II</span><span class="tag plain">OpenCV</span><span class="tag plain">Bluetooth</span></div></div>
         </div>
         <div class="case-grid">
-          <div class="cell"><div class="lab">문제</div><p>급발진 의심 상황에서 운전자가 어떤 페달을 밟고 있었는지 객관적으로 판단할 근거가 없었습니다.</p></div>
-          <div class="cell"><div class="lab">제약</div><p>라즈베리파이 한 대에서 센서, OBD, 카메라를 함께 처리해야 했고, 압력 센서는 아날로그 출력이라 바로 읽을 수 없었습니다. 오판정은 운전자를 더 혼란스럽게 만듭니다.</p></div>
-          <div class="cell"><div class="lab">선택</div><p>압력값은 ADC로 변환해 읽었습니다. 신호 하나로 판정하지 않도록 브레이크 압력, 가속 페달 압력, 차량 가속도, 페달 각속도를 순서대로 확인하는 단계형 조건으로 판단하고, 판정 후 0.5초 주기로 2초간 더 모아 사용자 과실과 차량 결함을 구분했습니다.</p></div>
-          <div class="cell"><div class="lab">결과·검증</div><p>센서값과 OBD 속도를 디스플레이에 실시간 출력해 판정 조건을 확인했고, 결과를 음성으로 안내했습니다. 한국정보기술학회 하계 논문경진대회 동상을 받았습니다.</p></div>
+          <div class="cell"><div class="lab">문제 상황</div><p>급발진 의심 상황에서 운전자가 어떤 페달을 밟고 있었는지 객관적으로 판단할 근거가 없었습니다.</p></div>
+          <div class="cell"><div class="lab">고민 포인트</div><p>라즈베리파이 한 대에서 센서, OBD, 카메라를 함께 처리해야 했고, 아날로그 압력 센서는 바로 읽을 수 없었습니다. 오판정은 운전자를 더 혼란스럽게 하기에 신호 하나로 판정하지 않을 방법이 필요했습니다.</p></div>
+          <div class="cell"><div class="lab">나의 액션</div><p>압력값은 ADC로 변환해 읽고, 브레이크 압력, 가속 페달 압력, 차량 가속도, 페달 각속도를 순서대로 확인하는 단계형 조건으로 판단했습니다. 판정 후에는 0.5초 주기로 2초간 더 모아 사용자 과실과 차량 결함을 구분했습니다.</p></div>
+          <div class="cell"><div class="lab">성과</div><p>센서값과 OBD 속도를 디스플레이에 실시간 출력해 판정 조건을 확인했고, 결과를 음성으로 안내했습니다. 한국정보기술학회 하계 논문경진대회 동상을 받았습니다.</p></div>
         </div>
-        <div class="code-note"><span class="lab">판단 조건 일부</span><code>pressure_brk &gt; 200 → pressure_acc ≤ 200 → 0 ≤ accel ≤ 0.08 → |ω_pedal| ≥ 20</code></div>
-        <p class="redo"><b>다시 만든다면</b> 센서 읽기, 판단, 출력을 스레드로 나누고, 임계값을 실제 주행 데이터로 보정하겠습니다.</p>
+        
       </article>
 
       <article class="case">
         <div class="case-head">
           <div><div class="ctx">현대모비스 모비우스 부트캠프 PBL · 2026.02 – 03 · 5인 중 팀원</div>
-          <h3>OTA 기반 첨단 차량 기능 업데이트 시스템</h3></div>
-          <div class="tags"><span class="tag">CANoe</span><span class="tag">CAPL</span><span class="tag">CAN</span><span class="tag plain">AWS</span><span class="tag plain">V모델</span></div>
+          <h3>OTA 기반 첨단 차량 기능 업데이트 시스템</h3>
+          <p class="takeaway">CAN 기반 차량 네트워크 이해,<br>요구사항에서 구현과 검증으로 이어지는 V모델 개발 흐름</p>
+          <div class="tags"><span class="tag">CANoe</span><span class="tag">CAPL</span><span class="tag">CAN</span><span class="tag plain">V모델</span></div></div>
         </div>
         <div class="case-grid">
-          <div class="cell"><div class="lab">문제</div><p>클라우드에서 받은 새 라이트 기능을 Telematics, VUM을 거쳐 Light ECU까지 안전하게 업데이트하는 흐름을 가상 SDV 환경에서 구현해야 했습니다.</p></div>
-          <div class="cell"><div class="lab">제약</div><p>업데이트는 시동 ACC, 속도 0일 때만 가능하고, Gateway를 중심으로 한 4개 CAN 채널에서 정해진 메시지 사양(DBC)을 지켜야 했습니다.</p></div>
-          <div class="cell"><div class="lab">내 담당</div><p>업데이트 조건 판단에 쓰이는 속도·조향·시동·조도 입력 ECU 4종을 CAPL로 구현해 사양대로 신호를 보냈고, 조향각에 따른 코너링 램프와 조도 기반 오토빔을 구현했습니다.</p></div>
-          <div class="cell"><div class="lab">검증</div><p>요구사항 ID와 연결한 시스템 통합 테스트 10건을 수행해 업데이트 조건 판단, 진행률 표시, 롤백, 결과 기록을 시나리오별로 확인했습니다.</p></div>
+          <div class="cell"><div class="lab">문제 상황</div><p>클라우드에서 받은 새 라이트 기능을 Telematics, VUM을 거쳐 Light ECU까지 안전하게 업데이트하는 흐름을 가상 SDV 환경에서 구현해야 했습니다.</p></div>
+          <div class="cell"><div class="lab">고민 포인트</div><p>업데이트는 시동 ACC, 속도 0일 때만 가능해서, 제가 만드는 입력 신호가 다른 팀원의 업데이트 조건 판단에 그대로 쓰였습니다. 4개 CAN 채널에서 정해진 DBC 사양을 정확히 지키는 것이 중요했습니다.</p></div>
+          <div class="cell"><div class="lab">나의 액션</div><p>팀원으로서 속도·조향·시동·조도 입력 ECU 4종을 CAPL로 사양에 맞춰 구현하고, 조향각에 따른 코너링 램프와 조도 기반 오토빔을 구현했습니다.</p></div>
+          <div class="cell"><div class="lab">성과</div><p>요구사항 ID와 연결한 시스템 통합 테스트 10건을 수행해 업데이트 조건 판단, 진행률 표시, 롤백, 결과 기록을 시나리오별로 확인했습니다.</p></div>
         </div>
-        <p class="redo"><b>다시 만든다면</b> 반복 수행한 통합 테스트를 CANoe 테스트 모듈로 자동화해 회귀 테스트를 빠르게 돌리겠습니다.</p>
+        
       </article>
 
       <article class="case">
         <div class="case-head">
-          <div><div class="ctx">캡스톤디자인 · 2025.02 – 06 · 4인 중 AI 서버·백엔드</div>
-          <h3>모밋 · AI 회의록 요약 동아리 관리 앱</h3></div>
-          <div class="tags"><span class="tag">FastAPI</span><span class="tag">Whisper</span><span class="tag">pyannote</span><span class="tag plain">GPT</span><span class="tag plain">Linux</span></div>
+          <div><div class="ctx">인턴 사내 AI 프로젝트 · 2026.06 – 현재 · 개인 개발, 팀 배포</div>
+          <h3>Jira Board · AI로 팀의 반복 업무를 줄인 도구</h3>
+          <p class="takeaway">AI로 반복 업무를 자동화한 경험,<br>팀원들에게 먼저 묻고 소통하며 쓰는 사람의 불편에서 출발하는 개발 태도</p>
+          <div class="tags"><span class="tag">Jira</span><span class="tag">사내 AI</span><span class="tag plain">AI 코딩 도구</span></div></div>
         </div>
         <div class="case-grid">
-          <div class="cell"><div class="lab">문제</div><p>녹음만 하면 화자별 스크립트와 요약이 만들어져야 했는데, 회의가 길어질수록 처리 시간이 크게 늘어 실사용이 어려웠습니다.</p></div>
-          <div class="cell"><div class="lab">원인</div><p>단계별로 확인해 보니 화자 분리보다 STT가 병목이었고, 화자별로 음성을 잘라 모델을 여러 번 호출하는 구조 자체가 원인이었습니다.</p></div>
-          <div class="cell"><div class="lab">선택</div><p>전체 음성을 한 번에 STT한 뒤 문장 시작 시간을 화자 분리 결과와 매칭했습니다. 요청이 몰릴 때를 대비해 업로드 즉시 응답하고 우선순위 큐와 비동기 워커로 처리했습니다.</p></div>
-          <div class="cell"><div class="lab">결과</div><p>처리 속도가 빨라지고 긴 회의도 안정적으로 처리했습니다. KoBART의 구어체 요약 한계를 확인한 뒤 GPT 요약으로 바꿔 품질을 확보했고, 학회 은상을 받았습니다.</p></div>
+          <div class="cell"><div class="lab">문제 상황</div><p>사내 AI 활용 과제를 받았고, 팀원들은 로그 압축 해제, 이슈별 라벨 수정, 몰아 쓰다 하루 20시간을 넘기는 워크로그, 흩어진 실패 이슈 찾기에 시간을 쓰고 있었습니다.</p></div>
+          <div class="cell"><div class="lab">고민 포인트</div><p>AI 기술 시연으로 끝낼지, 팀이 실제로 쓰는 도구를 만들지 고민했고 후자를 택했습니다. AI로 코드를 만들더라도 제가 설명하고 책임질 수 있어야 한다고 판단했습니다.</p></div>
+          <div class="cell"><div class="lab">나의 액션</div><p>팀원들의 불편을 먼저 듣고, 불편 하나마다 기능 하나로 답했습니다. 캘린더형 워크로그, 라벨 일괄 변경, 자동 압축 해제, AI 코멘트 작성과 유사 이슈 연결을 만들고, AI가 만든 코드는 모든 변경점을 직접 읽고 반영했습니다.</p></div>
+          <div class="cell"><div class="lab">성과</div><p>팀에 배포해 의견을 받아 오류와 응답 속도를 개선했습니다. 한 달 치 워크로그·라벨 수정이 반나절에서 10분으로 줄었고, 팀장님은 통계 그래프로 업무 보고서를 작성하셨습니다.</p></div>
         </div>
-        <p class="redo"><b>다시 만든다면</b> 단계별 처리 시간을 측정해 기록하고, 개선 폭을 수치로 남기겠습니다.</p>
+        
       </article>
     </div>
   </section>
@@ -339,7 +345,7 @@ footer{padding-block:40px 60px;color:var(--muted);font-size:13.5px;border-top:1p
       </div>
       <div>
         <div class="skill-row"><span class="cat">AUTOMOTIVE</span><div class="tags" style="margin:0"><span class="tag">CAN</span><span class="tag">CANoe</span><span class="tag plain">V모델</span><span class="tag plain">OTA</span></div></div>
-        <div class="skill-row"><span class="cat">TOOL</span><div class="tags" style="margin:0"><span class="tag plain">Git</span><span class="tag plain">Jira REST API</span><span class="tag plain">PlantUML</span><span class="tag plain">Notion</span><span class="tag plain">Figma</span></div></div>
+        <div class="skill-row"><span class="cat">TOOL</span><div class="tags" style="margin:0"><span class="tag plain">Git</span><span class="tag plain">Jira</span><span class="tag plain">PlantUML</span><span class="tag plain">Notion</span><span class="tag plain">Figma</span></div></div>
       </div>
     </div>
   </section>
@@ -350,7 +356,6 @@ footer{padding-block:40px 60px;color:var(--muted);font-size:13.5px;border-top:1p
         <div class="sec-head"><div><div class="eyebrow">Awards</div><h2>수상</h2></div></div>
         <ul class="timeline">
           <li><span class="d">2025.11.28</span><div><div class="w">한국정보기술학회 추계 논문경진대회 <span class="prize">은상</span></div><div class="x">AI 기반 회의 기록 저장 및 요약 기능을 갖춘 대학 동아리 통합 관리 시스템</div></div></li>
-          <li><span class="d">2025.11.28</span><div><div class="w">한국정보기술학회 추계 논문경진대회 <span class="prize">동상</span></div><div class="x">3D 합성곱 신경망을 활용한 뇌 MRI 기반 산소추출률 예측</div></div></li>
           <li><span class="d">2025.06.13</span><div><div class="w">한국정보기술학회 하계 논문경진대회 <span class="prize">동상</span></div><div class="x">OBD 데이터와 센서를 이용한 급발진 예방 및 대응 시스템</div></div></li>
           <li><span class="d">2024.11.22</span><div><div class="w">한국정보기술학회 추계 논문경진대회 <span class="prize">동상</span></div><div class="x">자전거 이용자들을 위한 편의 서비스: 달리자전거</div></div></li>
           <li><span class="d">2024.08.13</span><div><div class="w">경상북도 공공데이터 활용 창업경진대회 <span class="prize">장려상</span></div><div class="x">제품 및 서비스 개발 부문 · 팀 달리고</div></div></li>
@@ -359,10 +364,10 @@ footer{padding-block:40px 60px;color:var(--muted);font-size:13.5px;border-top:1p
       <div>
         <div class="sec-head"><div><div class="eyebrow">Education · Certification</div><h2>교육 · 자격</h2></div></div>
         <ul class="timeline">
-          <li><span class="d">2026.01</span><div><div class="w">벡터코리아 CANoe Workshop</div><div class="x">CAN 프로토콜, CANoe 측정·분석, CAPL 시뮬레이션</div></div></li>
-          <li><span class="d">2025.09</span><div><div class="w">현대모비스 모비우스 부트캠프 1기</div><div class="x">2025.09 – 2026.03 · 모빌리티 공통 SW, PBL 프로젝트</div></div></li>
-          <li><span class="d">2025.09</span><div><div class="w">정보처리기사</div><div class="x">한국산업인력공단</div></div></li>
+          <li><span class="d">2026.03</span><div><div class="w">현대모비스 모비우스 부트캠프 1기 수료</div><div class="x">2025.09 – 2026.03 · 모빌리티 공통 SW, PBL 프로젝트</div></div></li>
           <li><span class="d">2026.02</span><div><div class="w">금오공과대학교 컴퓨터소프트웨어공학 졸업</div><div class="x">2022.03 – 2026.02 · 학점 3.85 / 4.5</div></div></li>
+          <li><span class="d">2026.01</span><div><div class="w">벡터코리아 CANoe Workshop 이수</div><div class="x">2026.01.21 – 01.23 · CAN 프로토콜, CANoe 측정·분석, CAPL 시뮬레이션</div></div></li>
+          <li><span class="d">2025.09</span><div><div class="w">정보처리기사 취득</div><div class="x">한국산업인력공단</div></div></li>
         </ul>
       </div>
     </div>
@@ -371,21 +376,17 @@ footer{padding-block:40px 60px;color:var(--muted);font-size:13.5px;border-top:1p
   <section id="contact">
     <div class="sec-head"><div><div class="eyebrow">Contact</div><h2>연락처</h2></div></div>
     <div class="contact">
-      <div class="chip"><span class="lab">EMAIL</span><span id="mail">이메일 주소</span><button type="button" data-copy="mail">복사</button></div>
+      <div class="chip"><span class="lab">EMAIL</span><span id="mail">lwknk1119@naver.com</span><button type="button" data-copy="mail">복사</button></div>
       <div class="chip"><span class="lab">GITHUB</span><a href="https://github.com/LNK1119" target="_blank" rel="noopener">github.com/LNK1119</a></div>
       <div class="chip"><span class="lab">BLOG</span><a href="https://jaksim3day.tistory.com" target="_blank" rel="noopener">jaksim3day.tistory.com</a></div>
     </div>
   </section>
 
-  <footer>© 2026 임나경 · 회사 보안을 위해 인턴 업무의 내부 코드·로그·화면은 싣지 않았습니다.</footer>
+  <footer>© 2026 임나경</footer>
 </div>
 
 <script>
 (function(){
-  var root=document.documentElement, btn=document.getElementById('themeToggle');
-  function current(){var t=root.getAttribute('data-theme'); if(t) return t; return window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
-  try{var saved=localStorage.getItem('nk-theme'); if(saved) root.setAttribute('data-theme',saved);}catch(e){}
-  btn.addEventListener('click',function(){var next=current()==='dark'?'light':'dark'; root.setAttribute('data-theme',next); try{localStorage.setItem('nk-theme',next);}catch(e){}});
   document.querySelectorAll('[data-copy]').forEach(function(b){
     b.addEventListener('click',function(){
       var el=document.getElementById(b.getAttribute('data-copy')), txt=el.textContent;
@@ -396,3 +397,5 @@ footer{padding-block:40px 60px;color:var(--muted);font-size:13.5px;border-top:1p
   function selectText(el){var r=document.createRange(); r.selectNodeContents(el); var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);}
 })();
 </script>
+
+</body></html>
